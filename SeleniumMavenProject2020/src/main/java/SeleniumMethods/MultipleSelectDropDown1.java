@@ -27,7 +27,7 @@ public class MultipleSelectDropDown1 {
 		List<WebElement> dropList = driver.findElements(By.xpath("//span[@class='comboTreeItemTitle']"));
 		System.out.println(dropList.size());
 		
-		//Print
+		//Print out
 		for(int i=0; i<dropList.size(); i++){
 			String text = dropList.get(i).getText();
 			System.out.println(text);
@@ -35,21 +35,16 @@ public class MultipleSelectDropDown1 {
 			//Ignore empty values
 			if(!text.isEmpty()){
 				dropList.get(i).click();
-				//System.out.println(text);
-				
 			}
 			
-			if(text.equals("choice 6 2 2")){
+			if(text.equals("choice 6")){
 				dropList.get(i).click();
 				break;
 			}
+			
+			
 		}
 		
-		
-		
-		
-		
-
 	}
 
 }
