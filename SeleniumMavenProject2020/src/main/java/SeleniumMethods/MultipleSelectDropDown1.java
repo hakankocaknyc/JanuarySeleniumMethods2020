@@ -20,7 +20,7 @@ public class MultipleSelectDropDown1 {
 		
 		
 		
-		driver.findElement(By.id("justAnInputBox")).click();
+		driver.findElement(By.xpath("justAnInputBox")).click();
 		
 		//Collect all values
 		

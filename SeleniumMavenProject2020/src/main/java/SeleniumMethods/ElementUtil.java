@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 
 public class ElementUtil {
 	
@@ -99,6 +100,11 @@ public class ElementUtil {
 	public static void quitBrowser(WebDriver driver){
 		driver.quit();
 	}
-	
+	public static void mouseOver(WebDriver driver, By locator){
+
+        Actions action = new Actions(driver);
+        WebElement mouseOverAction = driver.findElement(locator);
+        action.moveToElement(mouseOverAction).perform();
+    }
 	
 }
